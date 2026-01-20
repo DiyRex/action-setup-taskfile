@@ -19,7 +19,7 @@ steps:
   - uses: actions/checkout@v4
 
   - name: Setup Taskfile
-    uses: DiyRex/action-setup-taskfile@v1
+    uses: DiyRex/action-setup-taskfile@v1.0.0
 
   - name: Run tasks
     run: task --list
@@ -32,7 +32,7 @@ steps:
   - uses: actions/checkout@v4
 
   - name: Setup Taskfile
-    uses: DiyRex/action-setup-taskfile@v1
+    uses: DiyRex/action-setup-taskfile@v1.0.0
     with:
       version: '3.46.4'
 
@@ -48,7 +48,7 @@ steps:
 
   - name: Setup Taskfile
     id: taskfile
-    uses: DiyRex/action-setup-taskfile@v1
+    uses: DiyRex/action-setup-taskfile@v1.0.0
 
   - name: Print version
     run: echo "Installed Taskfile v${{ steps.taskfile.outputs.version }}"
@@ -100,7 +100,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Setup Taskfile
-        uses: DiyRex/action-setup-taskfile@v1
+        uses: DiyRex/action-setup-taskfile@v1.0.0
 
       - name: Build
         run: task build
@@ -129,7 +129,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Setup Taskfile
-        uses: DiyRex/action-setup-taskfile@v1
+        uses: DiyRex/action-setup-taskfile@v1.0.0
 
       - name: Run tasks
         run: task ci
