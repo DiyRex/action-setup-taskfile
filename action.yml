@@ -1,0 +1,27 @@
+name: 'Setup Taskfile'
+description: 'Fast setup of Taskfile (go-task) CLI in GitHub Actions with caching support'
+author: 'DiyRex'
+
+branding:
+  icon: 'check-square'
+  color: 'blue'
+
+inputs:
+  version:
+    description: 'Version of Taskfile to install (e.g., "3.46.4", "v3.46.4", or "latest")'
+    required: false
+    default: 'latest'
+  github-token:
+    description: 'GitHub token for API requests to avoid rate limiting when fetching latest version'
+    required: false
+    default: ${{ github.token }}
+
+outputs:
+  version:
+    description: 'The version of Taskfile that was installed'
+  cache-hit:
+    description: 'Whether the Taskfile binary was restored from cache'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
