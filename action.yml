@@ -1,4 +1,4 @@
-name: 'Setup Taskfile'
+name: 'Setup Taskfile CLI'
 description: 'Fast setup of Taskfile (go-task) CLI in GitHub Actions with caching support'
 author: 'DiyRex'
 
